@@ -43,9 +43,9 @@ class App extends React.Component {
              isOpen={ isMenuOpen }
              toggleMenu={ this.toggleMenu }
           >
-           <MenuItem link="#1" toggleMenu={ this.toggleMenu }>Higher-Order Components</MenuItem>
-           <MenuItem link="#2" toggleMenu={ this.toggleMenu }>Compound Components</MenuItem>
-           <MenuItem link="#3" toggleMenu={ this.toggleMenu }>Context</MenuItem>
+           <MenuItem link="#1">Higher-Order Components</MenuItem>
+           <MenuItem link="#2">Compound Components</MenuItem>
+           <MenuItem link="#3">Context</MenuItem>
            <Accordion header="I'm an accordion">
              <MenuItem link="#4" toggleMenu={ this.toggleMenu }>Lorem ipsum</MenuItem>
            </Accordion>
@@ -79,4 +79,4 @@ class App extends React.Component {
   }
 }
 
-export default withWidth({ largeWidth: 2300, mediumWidth: 2200 })(App)
+export default withWidth()(App)
