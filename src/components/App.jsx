@@ -47,7 +47,7 @@ class App extends React.Component {
            <MenuItem link="#2">Compound Components</MenuItem>
            <MenuItem link="#3">Context</MenuItem>
            <Accordion header="I'm an accordion">
-             <MenuItem link="#4" toggleMenu={ this.toggleMenu }>Lorem ipsum</MenuItem>
+             <MenuItem link="#1">Lorem ipsum</MenuItem>
            </Accordion>
            <hr />
            <a href="https://reactjs.academy/react-redux-training-london" target="_blank">
