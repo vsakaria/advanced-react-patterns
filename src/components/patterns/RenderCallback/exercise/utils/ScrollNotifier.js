@@ -23,7 +23,7 @@ const ScrollNotifier = ({ buffer, onScrollAtTheBottom, style, children }) => {
 ScrollNotifier.propTypes = {
   buffer: React.PropTypes.number.isRequired,
   onScrollAtTheBottom: React.PropTypes.func
-},
+}
 
 ScrollNotifier.defaultProps = {
   buffer: 300
