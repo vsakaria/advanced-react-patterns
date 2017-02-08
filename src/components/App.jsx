@@ -43,11 +43,11 @@ class App extends React.Component {
              isOpen={ isMenuOpen }
              toggleMenu={ this.toggleMenu }
           >
-           <MenuItem link="#1">Higher-Order Components</MenuItem>
-           <MenuItem link="#2">Compound Components</MenuItem>
-           <MenuItem link="#3">Context</MenuItem>
-           <Accordion header="I'm an accordion">
-             <MenuItem link="#4" toggleMenu={ this.toggleMenu }>Lorem ipsum</MenuItem>
+            <MenuItem link="#1">Higher-Order Components</MenuItem>
+            <MenuItem link="#2">Render Callback</MenuItem>
+            <MenuItem link="#3">Compound Components</MenuItem>
+            <Accordion header="accordion">
+              <MenuItem link="#4">Context</MenuItem>
            </Accordion>
            <hr />
            <a href="https://reactjs.academy/react-redux-training-london" target="_blank">
