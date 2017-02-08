@@ -4,6 +4,7 @@ import withWidth, { LARGE } from './patterns/HigherOrderComponents/exercise/with
 import Question1 from './questions/Question1'
 import Question2 from './questions/Question2'
 import Question3 from './questions/Question3'
+import Question4 from './questions/Question4'
 import MenuItem from './patterns/CompoundComponents/exercise/MenuItem'
 import Menu from './patterns/CompoundComponents/exercise/Menu'
 import Accordion from './patterns/Context/exercise/Accordion'
@@ -44,10 +45,10 @@ class App extends React.Component {
              toggleMenu={ this.toggleMenu }
           >
            <MenuItem link="#1">Higher-Order Components</MenuItem>
-           <MenuItem link="#2">Compound Components</MenuItem>
-           <MenuItem link="#3">Context</MenuItem>
-           <Accordion header="I'm an accordion">
-             <MenuItem link="#1">Lorem ipsum</MenuItem>
+           <MenuItem link="#2">Render Callback</MenuItem>
+           <MenuItem link="#3">Compound Components</MenuItem>
+           <Accordion header="accordion">
+             <MenuItem link="#4">Context</MenuItem>
            </Accordion>
            <hr />
            <a href="https://reactjs.academy/react-redux-training-london" target="_blank">
@@ -67,11 +68,9 @@ class App extends React.Component {
           <div style={ styles } className="view-container">
             <h1>Advanced React Patterns</h1>
             <Question1 />
-            <hr />
             <Question2 />
-            <hr />
             <Question3 />
-            <hr />
+            <Question4 />
           </div>
        </div>
      </Modal>
