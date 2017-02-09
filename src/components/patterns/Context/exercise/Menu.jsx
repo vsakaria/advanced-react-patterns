@@ -4,7 +4,7 @@ import SideMenu from 'react-burger-menu'
 import withWidth, { LARGE } from '../../HigherOrderComponents/exercise/withWidth'
 import FloatingMenuBtn from '../../../FloatingMenuBtn'
 
-class Menu extends Component {
+class Menu extends React.Component {
 
   getChildContext () {
     const { toggleMenu } = this.props
