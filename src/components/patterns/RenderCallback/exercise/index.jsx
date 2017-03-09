@@ -1,5 +1,5 @@
 import React from 'react'
-import ScrollNotifier from './utils/ScrollNotifier'
+import ScrollNotifier from './ScrollNotifier'
 import GitHubIssueSearcher from './GitHubIssueSearcher'
 
 const Exercise = () => (
