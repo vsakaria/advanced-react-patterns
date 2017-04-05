@@ -1,6 +1,6 @@
 import React from 'react'
 import withMousePosition from '../patterns/HigherOrderComponents/example/withMousePosition'
-// import withRouter from '../patterns/HigherOrderComponents/exercise/withRouter'
+import withRouter from '../patterns/HigherOrderComponents/exercise/withRouter'
 
 const Question1 = (props, context) => (
   <div>
@@ -20,15 +20,18 @@ const Question1 = (props, context) => (
     </div>
     <h3>Exercise withRouter</h3>
     <p>
-      Implement the withRouter higher-order component so it gets the router from the context and it injects it to the composed component.
+      This link uses the router from context <a onClick={() => { context.router.history.push("/hello") }}>hello page</a> to test the router.
     </p>
     <p>
-      Once implemented the withRouter, you should remove <code>Question1.contextTypes = &#123;
+      Step 1. Implement the withRouter higher-order component so it gets the router from the context and it injects it to the composed component.
+    </p>
+    <p>
+      Step 2. Once implemented the withRouter, you should remove <code>Question1.contextTypes = &#123;
         router: React.PropTypes.object
       &#125;</code> from components/questions/Question1 and do instead <code>withRouter(withMousePosition(Question1))</code>
     </p>
     <p>
-      Navigate to the <a onClick={() => { context.router.history.push("/hello") }}>hello page</a> to test the router.
+      Then this link <a onClick={() => { props.router.history.push("/hello") }}>hello page</a> should work.
     </p>
     <p>
       File of the exercise: patterns/HigherOrderComponents/exercise/withRouter.jsx
@@ -51,8 +54,10 @@ const Question1 = (props, context) => (
   </div>
 )
 
+/*
 Question1.contextTypes = {
   router: React.PropTypes.object
 }
+*/
 
-export default withMousePosition(Question1)
+export default withRouter(withMousePosition(Question1))
