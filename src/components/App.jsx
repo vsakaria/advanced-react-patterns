@@ -96,4 +96,4 @@ class App extends React.Component {
   }
 }
 
-export default withWidth(App)
+export default withWidth({ largeWidth: 900, mediumWidth: 200 })(App)
