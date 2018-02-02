@@ -9,7 +9,7 @@ const withRouter = (MyComponent) => {
     // here you need to inject the router to the composed component
     <MyComponent
       { ...props }
-      { ...context }
+      router={context.router}
     />
   )
 
