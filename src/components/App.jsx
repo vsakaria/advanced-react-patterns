@@ -1,6 +1,6 @@
 import React from 'react'
 
-import withWidth, { LARGE } from './patterns/HigherOrderComponents/exercise/withWidth'
+import withWidth, { LARGE } from './patterns/HigherOrderComponents/exercise/myWidth'
 import Question1 from './questions/Question1'
 import Question2 from './questions/Question2'
 import Question3 from './questions/Question3'
@@ -96,4 +96,4 @@ class App extends React.Component {
   }
 }
 
-export default withWidth({ largeWidth: 900, mediumWidth: 200 })(App)
+export default withWidth(App)
