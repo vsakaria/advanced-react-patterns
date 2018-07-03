@@ -1,7 +1,7 @@
 import React from 'react'
 import SideMenu from 'react-burger-menu'
 
-import withWidth, { LARGE } from '../../HigherOrderComponents/exercise/withWidth'
+import withWidth, { LARGE } from '../../HigherOrderComponents/exercise/appWithWidth'
 import FloatingMenuBtn from '../../../FloatingMenuBtn'
 
 const Menu = ({ isOpen, children, pageWrapId, width, toggleMenu }) => (
@@ -18,4 +18,4 @@ const Menu = ({ isOpen, children, pageWrapId, width, toggleMenu }) => (
   </div>
 )
 
-export default withWidth()(Menu)
+export default withWidth(Menu)
