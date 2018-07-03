@@ -1,5 +1,5 @@
 import React from 'react'
-// import withData from '../../patterns/HigherOrderComponents/exercise/withData'
+import withData from '../../patterns/HigherOrderComponents/exercise/withData'
 
 const List = ({ data = [], error, loading }) => {
   if (error) {
@@ -24,4 +24,4 @@ const List = ({ data = [], error, loading }) => {
   }
 }
 
-export default List
+export default withData(List)
