@@ -7,7 +7,7 @@ import FloatingMenuBtn from '../../../FloatingMenuBtn'
 const Menu = ({ isOpen, children, pageWrapId, width, toggleMenu}) => {
   const childrenCloned = React.Children.map(children, (child) => (
     React.cloneElement(child, {
-      onClick: toggleMenu
+      toggleMenu
     })
   ))
 
