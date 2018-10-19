@@ -33,11 +33,6 @@ export const connect = (mapStateToProps, mapDispatchToProps) => {
             }
         }
 
-        // You don't need to change anyting from here
-        ConnectedComponent.contextTypes = {
-            store: PropTypes.object
-        }
-
         return ConnectedComponent
     }
 }
