@@ -110,6 +110,4 @@ const mapDispatchToProps = dispatch => ({
   dispatch
 })
 
-// Uncomment the following line for the HoCs bonus exercise
-// export default connect(mapStateToProps, mapDispatchToProps)(withMousePosition(Question1))
-export default withMousePosition(Question1)
+export default connect(mapStateToProps, mapDispatchToProps)(withMousePosition(Question1))
