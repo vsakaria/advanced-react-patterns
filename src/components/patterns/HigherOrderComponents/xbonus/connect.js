@@ -1,17 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-/*
-  Connect is a HoC (Higher-order Component) that:
-  1. Subscribes to changes from the store. Meaning when the store's state changes we rerender the component calling this.forceUpdate()
-  2. It get the state from the store by calling store.getState() and maps parts of the state in the child component using props
-*/
+// Don't do window.__store ever!! this is only to avoid using a provider until the context exercise
+const store = window.__store
+
 export const connect = (mapStateToProps, mapDispatchToProps) => {
     return Component => {
         class ConnectedComponent extends React.Component {
             componentDidMount() {
                 // We subscribe to the store just once, when the component is mounted. https://reactjs.org/docs/react-component.html#componentdidmount
-                this.unsubscribe = this.context.store.subscribe(() => {
+                this.unsubscribe = store.subscribe(() => {
                     this.forceUpdate()
                 })
             }
@@ -22,7 +20,6 @@ export const connect = (mapStateToProps, mapDispatchToProps) => {
             }
 
             render() {
-                const { store } = this.context
                 const propsWithDataFromTheState = mapStateToProps && mapStateToProps(store.getState())
                 const dispatch = mapDispatchToProps && mapDispatchToProps(store.dispatch)
 
