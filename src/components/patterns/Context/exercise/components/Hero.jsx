@@ -7,13 +7,14 @@ const Wrapper = styled("div")`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: ${({theme}) => theme.colors.background};
+  background-color: ${({theme}) => theme.background};
 `
 
 const Heading = styled.h1`
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  color: ${({theme}) => theme.colors.primary};
+  color: ${({theme}) => theme.foreground};
+  margin-bottom: 24px;
 `
 
 const Hero = ({children}) => (

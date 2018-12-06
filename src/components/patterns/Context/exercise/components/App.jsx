@@ -7,8 +7,8 @@ const App = () => (
   <ThemeContext.Consumer>
     {({ setValue }) => (
       <Hero>
-        <Button variant="secondary" onClick={setValue}>
-          Theme Toggle
+        <Button onClick={setValue}>
+          Theme Switcher
         </Button>
       </Hero>
     )}

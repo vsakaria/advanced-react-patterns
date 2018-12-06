@@ -5,8 +5,7 @@ const StyledButton = styled.button`
   padding: 8px 16px;
   border-radius: 3px;
   border: none;
-
-  background-color: ${({variant, theme}) => theme.colors[variant] || "white"};
+  background-color: black;
   color: white;
 `
 

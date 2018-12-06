@@ -16,7 +16,6 @@ class ThemeProvider extends React.Component {
   render() {
     const { theme } = this.state;
     const { children } = this.props;
-    console.log('theme => ', themes[theme]);
     return (
       <ThemeContext.Provider value={{theme, setValue: this.handleThemeToggle}}>
         <StyledProvider theme={themes[theme]}>
