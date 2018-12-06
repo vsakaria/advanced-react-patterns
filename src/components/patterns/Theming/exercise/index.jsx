@@ -24,9 +24,6 @@ const Card = styled("div")`
   background-color: white;
 `;
 
-/*
-  in this component just use the background color from the theme and asign it to this component
-*/
 const Wrapper = styled("div")`
   background-color: ${props => props.theme.colors.background};
   padding: 40px;
