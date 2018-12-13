@@ -25,7 +25,8 @@ const theme = {
         color: "white"
       }
     }
-  }
+  },
+  space: [0, 4, 8, 16, 24, 32, 48, 56]
 }
 
 export default theme;

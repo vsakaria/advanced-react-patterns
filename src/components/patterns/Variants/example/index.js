@@ -2,12 +2,13 @@ import React from "react";
 import styled, { ThemeProvider, css } from "styled-components";
 import theme from "./theme";
 import { variant } from 'styled-system'
+import Box from './Box'
 
 const buttonStyle = variant({
   key: "buttons"
 });
 
-const Button = styled("button")`
+const Button = styled(Box)`
   background: white;
   border-radius: 8px;
   font-size: 18px;
@@ -19,17 +20,17 @@ const Button = styled("button")`
 `;
 
 Button.defaultProps = {
-  variant: "primary"
+  variant: "primary",
+  as: 'button'
 }
 
-const Wrapper = styled("div")`
-  padding: 40px;
+const Wrapper = styled(Box)`
   background: ${props => props.theme.colors.background};
 `;
 
 const VariantsExample = () => (
   <ThemeProvider theme={theme}>
-    <Wrapper>
+    <Wrapper p={6}>
       <Button>Primary Button</Button>
       <Button variant="secondary">Secondary Button</Button>
     </Wrapper>
