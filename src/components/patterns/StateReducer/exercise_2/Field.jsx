@@ -14,20 +14,15 @@ export class Field extends React.Component {
 
   onChange = e => {
     const { stateReducer } = this.props;
-    const { state } = this.state;
+    const { value } = e.target;
 
-    this.setState(
-      stateReducer(state, { type: ON_FIELD_CHANGE, value: e.target.value })
+    this.setState(state =>
+      stateReducer(state, { type: ON_FIELD_CHANGE, value })
     );
   };
 
   onReset = e => {
-    const { stateReducer } = this.props;
-    const { state } = this.state;
-
-    this.setState(
-      stateReducer(state, { type: ON_FIELD_RESET, value: this.initialState })
-    );
+    // TODO finish the implementation of this method. You need to use the ON_FIELD_RESET type.
   };
 
   render() {
