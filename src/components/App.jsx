@@ -80,6 +80,9 @@ class App extends React.Component {
               5. State Reducer
             </MenuItem>
             <hr />
+            <MenuItem link="/theming" toggleMenu={this.toggleMenu}>6. Theming</MenuItem>
+            <MenuItem link="/variants" toggleMenu={this.toggleMenu}>7. Variants</MenuItem>
+            <hr />
             <MenuItem link="/compound-components" toggleMenu={this.toggleMenu}>
               8. Compound Components
             </MenuItem>
@@ -88,8 +91,6 @@ class App extends React.Component {
                 9. Context
               </MenuItem>
             </Accordion>
-            <MenuItem link="/theming" toggleMenu={this.toggleMenu}>5. Theming</MenuItem>
-            <MenuItem link="/variants" toggleMenu={this.toggleMenu}>6. Variants</MenuItem>
             <hr />
             <ul className="list-unstyled">
               <li>
