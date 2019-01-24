@@ -16,6 +16,7 @@ import CompositionPage from "./functional-programming/composition/Page";
 import ClosurePage from "./functional-programming/closure/Page";
 import StateReducerPage from "./patterns/StateReducer/Page";
 import Theming from './patterns/Theming/Page';
+// import Variants from './patterns/Variants/Page'
 
 class App extends React.Component {
   constructor() {
@@ -79,6 +80,9 @@ class App extends React.Component {
               5. State Reducer
             </MenuItem>
             <hr />
+            <MenuItem link="/theming" toggleMenu={this.toggleMenu}>6. Theming</MenuItem>
+            {/* <MenuItem link="/variants" toggleMenu={this.toggleMenu}>7. Variants</MenuItem> */}
+            <hr />
             <MenuItem link="/compound-components" toggleMenu={this.toggleMenu}>
               8. Compound Components
             </MenuItem>
@@ -87,7 +91,6 @@ class App extends React.Component {
                 9. Context
               </MenuItem>
             </Accordion>
-            <MenuItem link="/theming" toggleMenu={this.toggleMenu}>5. Theming</MenuItem>
             <hr />
             <ul className="list-unstyled">
               <li>
@@ -137,6 +140,7 @@ class App extends React.Component {
             />
             <Route path="/context" component={ContextPage} />
             <Route path="/theming" component={Theming} />
+            {/* <Route path="/variants" component={Variants} /> */}
           </div>
         </div>
       </Root>
