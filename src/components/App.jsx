@@ -16,6 +16,7 @@ import ClosurePage from "./functional-programming/closure/Page";
 import StateReducerPage from "./patterns/StateReducer/Page";
 import Theming from './patterns/Theming/Page';
 import Variants from './patterns/Variants/Page'
+import Accordion from "./patterns/Context/exercise/components/Accordion";
 
 class App extends React.Component {
   constructor() {
@@ -85,9 +86,11 @@ class App extends React.Component {
             <MenuItem link="/compound-components" toggleMenu={this.toggleMenu}>
               8. Compound Components
             </MenuItem>
+            <Accordion>
               <MenuItem link="/context" toggleMenu={this.toggleMenu}>
                 9. Context
               </MenuItem>
+            </Accordion>
             <hr />
             <ul className="list-unstyled">
               <li>
