@@ -7,7 +7,7 @@ export const LARGE = 3;
 const largeWidth = 992,
   mediumWidth = 768;
 
-const WithWidth = () => {
+const useWidth = () => {
   const windowWidth = () => {
     let innerWidth = 0;
     let width;
@@ -24,6 +24,7 @@ const WithWidth = () => {
 
     return width;
   };
+
   const [width, setWidth] = useState(windowWidth());
 
   useEffect(() => {
@@ -41,16 +42,7 @@ const WithWidth = () => {
     if (currentWidth !== width) setWidth(currentWidth);
   };
 
-  switch (width) {
-    case LARGE:
-      return <h1>I'm a large screen</h1>;
-    case MEDIUM:
-      return <h1>I'm a medium screen</h1>;
-    case SMALL:
-      return <h1>I'm a small screen</h1>;
-    default:
-      return null;
-  }
+  return width;
 };
 
-export default WithWidth;
+export default useWidth;
