@@ -1,22 +1,24 @@
 import React from "react";
 import SideMenu from "react-burger-menu";
 
-import withWidth, {
-  LARGE
-} from "../../HigherOrderComponents/exercise_2/withWidth";
+import useWidth, { LARGE } from "../../Hooks/exercise_bonus/useWidth";
 import FloatingMenuBtn from "../../../FloatingMenuBtn";
 
-const Menu = ({ isOpen, children, pageWrapId, width, toggleMenu }) => (
-  <div>
-    {width === LARGE ? "" : <FloatingMenuBtn toggleMenu={toggleMenu} />}
-    <SideMenu.slide
-      disableCloseOnEsc
-      isOpen={isOpen}
-      pageWrapId={pageWrapId || "page-wrap"}
-    >
-      {children}
-    </SideMenu.slide>
-  </div>
-);
+const Menu = ({ isOpen, children, pageWrapId, toggleMenu }) => {
+  const width = useWidth();
 
-export default withWidth(Menu);
+  return (
+    <div>
+      {width === LARGE ? "" : <FloatingMenuBtn toggleMenu={toggleMenu} />}
+      <SideMenu.slide
+        disableCloseOnEsc
+        isOpen={isOpen}
+        pageWrapId={pageWrapId || "page-wrap"}
+      >
+        {children}
+      </SideMenu.slide>
+    </div>
+  );
+};
+
+export default Menu;
