@@ -1,6 +1,6 @@
 import React from "react";
 import withMousePosition from "./example/withMousePosition";
-import Exercise1 from "./exercise_1";
+import ListGist from "./exercise_1";
 import { connect } from "./exercise_bonus/connect";
 import {
   incrementAction,
@@ -63,7 +63,9 @@ const Page = ({ dispatch, ...props }) => (
         <code>src/components/questions/Question1/List.jsx</code>
       </li>
     </ul>
-    <Exercise1 />
+
+    <ListGist />
+
     <div className="alert alert-warning">
       <h4>Pro-tip</h4>
       <p>

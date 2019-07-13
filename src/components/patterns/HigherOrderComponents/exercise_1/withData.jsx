@@ -27,7 +27,8 @@ const withData = Component => {
     };
 
     render() {
-      return <Component {...this.state} />;
+      // We pass down props to allow props to be set on the HoC component to trickle down to the passed in component.
+      return <Component {...this.props} {...this.state} />;
     }
   };
 };
