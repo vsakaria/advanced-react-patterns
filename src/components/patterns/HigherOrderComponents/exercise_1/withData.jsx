@@ -5,8 +5,8 @@ import React from "react";
     1- receives a COMPONENT as a parameter (hint: is this function receving a component?)
     2- and returns another component
 */
-const withData = () => {
-  class OuterComponent extends React.Component {
+const withData = Component => {
+  return class OuterComponent extends React.Component {
     state = {
       data: undefined,
       loading: false,
@@ -27,11 +27,9 @@ const withData = () => {
     };
 
     render() {
-      // you should return something here
+      return <Component {...this.state} />;
     }
-  }
-
-  return OuterComponent;
+  };
 };
 
 export default withData;
