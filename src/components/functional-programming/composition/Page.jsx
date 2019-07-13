@@ -1,6 +1,6 @@
 import React from "react";
 
-import { transformText } from "./example";
+import { alphaUpperCaseTransform, transformToAmazingLower } from "./example";
 import FormExercise from "./exercise";
 
 const exampleText = "1 2 3 ReactJS Academy is a m a z i n g";
@@ -20,7 +20,9 @@ const Page = () => (
     Tranform the following text: "{exampleText}" so it becomes
     <strong> REACTJSACADEMYISAMAZING</strong>
     <p>
-      Result: <strong>{transformText(exampleText)}</strong>
+      Result: <strong>{alphaUpperCaseTransform(exampleText)}</strong>
+      <br />
+      Result: <strong>{transformToAmazingLower(exampleText)}</strong>
     </p>
     <h3>Exercise</h3>
     <p>
