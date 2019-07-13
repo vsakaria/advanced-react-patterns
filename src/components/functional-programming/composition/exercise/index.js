@@ -2,14 +2,20 @@ import React from "react";
 import { Form, Field } from "react-final-form";
 import { required, mustBeEmail, atLeastFiveCharacters } from "./validators";
 
-// Task 1, implement the composeValidators function
-// each validator has a value as input and returns false or the error message
-export const composeValidators = (...validators) => value =>
-  validators.reduceRight((error, validator) => false, false);
+export const composeValidators = (...validators) => value => {
+  return validators.reduceRight((error, validator) => {
+    return error || validator(value);
+  }, false);
+};
 
-// Task 2, you need to use the composeValidators so
-// - Email is validated with required and mustBeEmail
-// - Password is validatie with required and atLeastFiveCharacters
+// The callback with in the reduce function is used to write the custom return logic
+// For the required purpose on the composer. Line 7
+
+// Here false is passed in to use as the error argument on the first call.
+// We do this because the reduce function will use the first argument in the array,
+// a function in our case, and these a function will represent error and therefore
+// a function will be returned which is no right.
+
 const FormExercise = () => (
   <Form
     onSubmit={onSubmit}
